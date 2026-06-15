@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { io } from 'socket.io-client'
 
-const SOCKET_URL = 'http://localhost:5000'
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL
 const ICE = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] }
 
 export default function Room() {
